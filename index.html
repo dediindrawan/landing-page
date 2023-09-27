@@ -10,35 +10,42 @@
 </head>
 
 <body>
-    <div class="container w-full">
-        <header class="w-full px-4 min-h-screen flex flex-col justify-center sm:bg-red-400">
-            <h1
-                class="font-semibold bg-clip-text text-transparent bg-gradient-to-br from-orange-400 to-orange-500 relative z-10">
-                Smart Sliding Wall<br>CV. Smart Asia Tech</h1>
-            <h1 class="mt-4 text-3xl text-white font-extrabold leading-10 relative z-10">Layout design, production,
-                and
-                installation
-                in One
-                Stop Service!</h1>
-            <h2 class="mt-4 text-slate-300 relative z-10">Spesialis partisi dinding geser peredam suara dengan
-                pengalaman
-                lebih dari 13 tahun.</h2>
-            <div class="subscribe-form mt-16 relative z-10">
-                <p class="text-sm text-slate-300 ">Masukkan email Anda untuk mulai berjelajah dan berlangganan berita terbaru.
-                </p>
-                <form action="index.html" class="flex mt-4">
-                    <input type="text" name="user email" id="email-input" placeholder="Alamat email" required
-                        class="w-full py-2 px-4 text-slate-300 rounded-tl-md rounded-bl-md bg-transparent border-2 border-r-0 border-orange-500">
-                    <button type="submit"
-                        class="w-28 text-white rounded-tr-md rounded-br-md bg-gradient-to-br from-orange-500 to-orange-600">Mulai</button>
-                </form>
-                <p class="mt-4 text-center text-slate-300">Atau</p>
+    <div class="container">
+        <header class="min-h-screen py-4 px-4 flex flex-col justify-between">
+            <div class="top-header h-14 flex justify-between items-center relative z-10">
+                <div class="brand w-28">
+                    <img src="public/asset/brand.png" alt="brand" class="w-full object-cover">
+                </div>
                 <button type="submit"
-                    class="w-full mt-4 py-2 text-white rounded-md bg-gradient-to-br from-orange-500 to-orange-600">Putar
-                    video</button>
+                    class="btn-top-start py-2.5 px-4 text-base bg-gradient-to-br from-orange-400 to-orange-600 text-white rounded-md" onclick="createInput()">Mulai</button>
+            </div>
+            <div class="middle-header text-center text-white relative z-10">
+                <h1 class="my-4 text-3xl font-extrabold">Design. Production. Installation. One Stop Service
+                    with
+                    <span class="text-transparent bg-clip-text bg-gradient-to-br from-orange-400 to-orange-600">Smart
+                        Sliding Wall</span>.
+                </h1>
+                <h2 class="text-base text-slate-300">Spesialis partisi dinding geser peredam suara dengan pengalaman
+                    lebih dari 13
+                    tahun.</h2>
+            </div>
+            <div class="bottom-header text-slate-300 relative z-10">
+                <div class="text-center mb-2">
+                    <small>Siap berjelajah? Masukkan email Anda untuk mulai dan
+                        berlangganan berita
+                        terbaru.</small>
+                </div>
+                <form action="index.html" class="flex justify-between gap-2">
+                    <input type="text" name="email-input" id="email-input" placeholder="Alamat email"
+                        class="w-full py-2.5 px-4 text-base text-slate-800 border-2 border-orange-500 rounded-md">
+                    <button type="submit"
+                        class="btn-email-submit py-2.5 px-4 text-base bg-gradient-to-br from-orange-400 to-orange-600 text-white rounded-md">Mulai</button>
+                </form>
             </div>
         </header>
     </div>
+
+    <script src="public/js/main.js"></script>
 </body>
 
 </html>

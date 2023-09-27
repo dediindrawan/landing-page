@@ -10,6 +10,24 @@
   }
 
   header {
+    background-image: url('/public/asset/image-1.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  header::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, rgba(143, 125, 115, 0.5), rgba(0, 0, 0, 0.95));
+  }
+
+  /* header {
     position: relative;
     background-image: url('https://images.unsplash.com/photo-1603430416744-a47cee46b0ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1596&q=80');
     background-size: cover;
@@ -24,7 +42,7 @@
     position: absolute;
     left: 0;
     background-image: linear-gradient(to bottom right, rgba(60, 59, 61, .8), rgba(0, 0, 0, .9));
-  }
+  } */
 
   input:focus {
     outline: none;
