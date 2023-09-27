@@ -9,6 +9,14 @@
     background-color: #000;
   }
 
+  h1 {
+    @apply text-3xl font-extrabold text-white;
+  }
+
+  p {
+    @apply text-slate-300;
+  }
+
   header {
     background-image: url('https://i.postimg.cc/sgD32ZBM/image-1.jpg');
     background-size: cover;
@@ -24,10 +32,61 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-image: linear-gradient(to bottom, rgba(143, 125, 115, 0.5), rgba(0, 0, 0, 0.95));
+    background-image: linear-gradient(to bottom, rgba(160, 149, 146, 0.5), rgba(0, 0, 0, 0.9) 80%);
+  }
+
+  header div {
+    @apply relative z-10;
   }
 
   input:focus {
     outline: none;
+  }
+
+  section:not(:last-child) {
+    @apply mb-28;
+  }
+
+  article:not(:last-child) {
+    @apply mb-28;
+  }
+
+  ul {
+    @apply text-slate-300;
+  }
+
+  i {
+    @apply text-slate-300;
+  }
+}
+
+@layer components {
+  .font-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-br from-orange-400 to-orange-600;
+  }
+
+  .input-primary {
+    @apply w-full py-2.5 px-4 text-base text-slate-300 border-2 border-orange-500 rounded-md bg-transparent;
+  }
+
+  .btn-primary {
+    @apply py-2.5 px-4 text-base text-white bg-gradient-to-br from-orange-400 to-orange-600 rounded-md;
+  }
+
+  .img-border {
+    @apply border-2 border-orange-400 rounded-lg;
+  }
+
+  .accordions:not(:last-child) {
+    @apply mb-2;
+  }
+
+  .accordions li:first-child {
+    @apply p-4 flex justify-between items-center gap-4 bg-neutral-800 cursor-pointer;
+  }
+
+  .accordions li:last-child {
+    @apply p-4 bg-neutral-800;
+    display: none;
   }
 }
