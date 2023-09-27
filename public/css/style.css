@@ -441,7 +441,7 @@ body {
 }
 
 header {
-  background-image: url('public/asset/image-1.jpeg');
+  background-image: url('https://i.postimg.cc/sgD32ZBM/image-1.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -701,8 +701,8 @@ input:focus {
   padding-bottom: 0.625rem;
 }
 
-.pb-8{
-  padding-bottom: 2rem;
+.pb-10{
+  padding-bottom: 2.5rem;
 }
 
 .pt-4{
