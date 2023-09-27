@@ -438,11 +438,10 @@ video {
 
 body {
   font-family: 'Poppins', sans-serif;
-  /* background-image: linear-gradient(to bottom right, #3c3b3d, #776c5b, #000000); */
 }
 
 header {
-  background-image: url('/public/asset/image-1.jpeg');
+  background-image: url('public/asset/image-1.jpeg');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -458,23 +457,6 @@ header::after {
   left: 0;
   background-image: linear-gradient(to bottom, rgba(143, 125, 115, 0.5), rgba(0, 0, 0, 0.95));
 }
-
-/* header {
-    position: relative;
-    background-image: url('https://images.unsplash.com/photo-1603430416744-a47cee46b0ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1596&q=80');
-    background-size: cover;
-    background-position: center;
-  }
-
-  header::before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    background-image: linear-gradient(to bottom right, rgba(60, 59, 61, .8), rgba(0, 0, 0, .9));
-  } */
 
 input:focus {
   outline: none;
@@ -680,15 +662,6 @@ input:focus {
   border-color: rgb(249 115 22 / var(--tw-border-opacity));
 }
 
-.bg-transparent{
-  background-color: transparent;
-}
-
-.bg-slate-200{
-  --tw-bg-opacity: 1;
-  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
-}
-
 .bg-gradient-to-br{
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
@@ -728,9 +701,12 @@ input:focus {
   padding-bottom: 0.625rem;
 }
 
-.py-4{
+.pb-8{
+  padding-bottom: 2rem;
+}
+
+.pt-4{
   padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 
 .text-center{
@@ -751,9 +727,9 @@ input:focus {
   font-weight: 800;
 }
 
-.text-slate-200{
+.text-slate-300{
   --tw-text-opacity: 1;
-  color: rgb(226 232 240 / var(--tw-text-opacity));
+  color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 
 .text-slate-800{
@@ -768,14 +744,4 @@ input:focus {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-slate-400{
-  --tw-text-opacity: 1;
-  color: rgb(148 163 184 / var(--tw-text-opacity));
-}
-
-.text-slate-300{
-  --tw-text-opacity: 1;
-  color: rgb(203 213 225 / var(--tw-text-opacity));
 }
