@@ -469,7 +469,7 @@ header::after {
   height: 100%;
   top: 0;
   left: 0;
-  background-image: linear-gradient(to bottom, rgba(160, 149, 146, 0.5), rgba(0, 0, 0, 0.9) 80%);
+  background-image: linear-gradient(to bottom, rgba(160, 149, 146, 0.5), rgba(0, 0, 0, 0.9));
 }
 
 header div{
@@ -617,10 +617,7 @@ i{
   --tw-border-opacity: 1;
   border-color: rgb(249 115 22 / var(--tw-border-opacity));
   background-color: transparent;
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 1rem;
   font-size: 1rem;
   line-height: 1.5rem;
   --tw-text-opacity: 1;
@@ -678,6 +675,11 @@ i{
   margin-right: auto;
 }
 
+.my-8{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .mb-4{
   margin-bottom: 1rem;
 }
@@ -722,6 +724,14 @@ i{
   gap: 0.5rem;
 }
 
+.gap-4{
+  gap: 1rem;
+}
+
+.p-4{
+  padding: 1rem;
+}
+
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
@@ -732,6 +742,11 @@ i{
   padding-bottom: 5rem;
 }
 
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .pb-12{
   padding-bottom: 3rem;
 }
@@ -740,11 +755,39 @@ i{
   padding-top: 1rem;
 }
 
+.pt-20{
+  padding-top: 5rem;
+}
+
 .text-center{
   text-align: center;
 }
 
-.text-xs{
-  font-size: 0.75rem;
-  line-height: 1rem;
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.leading-8{
+  line-height: 2rem;
+}
+
+.text-slate-300{
+  --tw-text-opacity: 1;
+  color: rgb(203 213 225 / var(--tw-text-opacity));
+}
+
+.underline{
+  text-decoration-line: underline;
+}
+
+.transition-opacity{
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.hover\:text-slate-500:hover{
+  --tw-text-opacity: 1;
+  color: rgb(100 116 139 / var(--tw-text-opacity));
 }

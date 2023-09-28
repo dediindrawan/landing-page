@@ -32,7 +32,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-image: linear-gradient(to bottom, rgba(160, 149, 146, 0.5), rgba(0, 0, 0, 0.9) 80%);
+    background-image: linear-gradient(to bottom, rgba(160, 149, 146, 0.5), rgba(0, 0, 0, 0.9));
   }
 
   header div {
@@ -66,7 +66,7 @@
   }
 
   .input-primary {
-    @apply w-full py-2.5 px-4 text-base text-slate-300 border-2 border-orange-500 rounded-md bg-transparent;
+    @apply w-full p-4 text-base text-slate-300 border-2 border-orange-500 rounded-md bg-transparent;
   }
 
   .btn-primary {
