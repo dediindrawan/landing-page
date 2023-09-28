@@ -86,7 +86,10 @@
   }
 
   .accordions li:last-child {
-    @apply p-4 bg-neutral-800;
-    display: none;
+    @apply p-4 bg-neutral-700 hidden;
+  }
+
+  .rotate-up-icon {
+    @apply rotate-180 transition-all .3s ease-in-out;
   }
 }
