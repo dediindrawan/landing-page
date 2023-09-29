@@ -1,10 +1,11 @@
 'use strict';
 
-const data = 'public/data/data.json';
+const data = 'src/data/data.json';
 
 const card = document.querySelector('.card');
 const faq = document.querySelector('.faq');
 
+// fetching data from json
 const getDataObject = () => {
     fetch(data)
         .then(res => {
