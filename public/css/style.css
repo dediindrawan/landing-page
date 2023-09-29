@@ -787,6 +787,11 @@ i{
 }
 
 @media (min-width: 640px){
+  .sm\:mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .sm\:w-full{
     width: 100%;
   }
