@@ -1,11 +1,13 @@
 'use strict';
 
 // popup toast
-let toast = document.querySelector('.toast');
+// let toast = document.querySelector('.toast');
 
 // form input 1
 const form1 = document.querySelector('.form-1');
 const emailInput1 = document.querySelector('#email-input-1');
+
+console.log(form1)
 
 form1.addEventListener('submit', (e) => {
     if (validateForm1()) {
@@ -16,19 +18,26 @@ form1.addEventListener('submit', (e) => {
 });
 
 function validateForm1() {
+    let result = true;
     let errorMessage = emailInput1.nextElementSibling;
 
     if (emailInput1.value.trim() == '') {
         errorMessage.style.display = 'block';
         errorMessage.textContent = 'Alamat email tidak boleh kosong';
+
+        result = false;
         emailInput1.focus();
-    } else if (!isEmailValid1(emailInput1.value)) {
+    } else if (!isEmailValid1(emailInput1.value.trim())) {
         errorMessage.style.display = 'block';
         errorMessage.textContent = 'Format email tidak valid';
+
+        result = false;
         emailInput1.focus();
     } else {
         sendEmail1();
     };
+
+    return result;
 };
 
 function isEmailValid1(emailInput1) {
@@ -50,17 +59,18 @@ function sendEmail1() {
             emailInput1.value;
             console.log(res);
 
-            toast.style.display = 'block';
+            // toast.style.display = 'block';
 
-            function showToast() {
-                setTimeout(function () {
-                    toast.innerHTML = `<p>Menyiapkan halaman utama Smart Sliding Walls</p>`;
-                }, 2500);
-                setTimeout(function () {
-                    toast.style.display = 'none';
-                }, 5000);
-            };
-            showToast();
+            // function showToast() {
+            //     setTimeout(function () {
+            //         toast.innerHTML = `<p>Menyiapkan halaman utama Smart Sliding Walls</p>`;
+            //     }, 2500);
+            //     setTimeout(function () {
+            //         toast.style.display = 'none';
+            //         form1.attributes
+            //     }, 5000);
+            // };
+            // showToast();
         })
         .catch(err => {
             console.error(err);
@@ -80,19 +90,26 @@ form2.addEventListener('submit', (e) => {
 });
 
 function validateForm2() {
+    let result = true;
     let errorMessage = emailInput2.nextElementSibling;
 
     if (emailInput2.value.trim() == '') {
         errorMessage.style.display = 'block';
         errorMessage.textContent = 'Alamat email tidak boleh kosong';
+
+        result = false;
         emailInput2.focus();
     } else if (!isEmailValid1(emailInput2.value)) {
         errorMessage.style.display = 'block';
         errorMessage.textContent = 'Format email tidak valid';
+
+        result = false;
         emailInput2.focus();
     } else {
         sendEmail2();
     };
+
+    return result;
 };
 
 function isEmailValid1(emailInput2) {
@@ -114,17 +131,17 @@ function sendEmail2() {
             emailInput2.value;
             console.log(res);
 
-            toast.style.display = 'block';
+            // toast.style.display = 'block';
 
-            function showToast() {
-                setTimeout(function () {
-                    toast.innerHTML = `<p>Menyiapkan halaman utama Smart Sliding Walls</p>`;
-                }, 2500);
-                setTimeout(function () {
-                    toast.style.display = 'none';
-                }, 5000);
-            };
-            showToast();
+            // function showToast() {
+            //     setTimeout(function () {
+            //         toast.innerHTML = `<p>Menyiapkan halaman utama Smart Sliding Walls</p>`;
+            //     }, 2500);
+            //     setTimeout(function () {
+            //         toast.style.display = 'none';
+            //     }, 5000);
+            // };
+            // showToast();
         })
         .catch(err => {
             console.error(err);
