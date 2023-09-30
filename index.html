@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Sliding Walls - CV. Smart Asia Tech</title>
-    <link rel="stylesheet" href="src/fontawesome-icon/css/all.css">
     <link rel="stylesheet" href="public/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" /> -->
 </head>
 
 <body>
     <div class="main-container">
+        <div class="toast w-full p-4 fixed top-0 z-20 bg-gradient-to-br from-orange-400 to-orange-500 hidden">
+            <p>Terimakasih atas antusias Anda</p>
+        </div>
+
         <header class="min-h-screen pt-4 px-4 pb-12 flex flex-col justify-between sm:px-8">
             <div class="flex justify-between items-center">
                 <img src="src/asset/brand.png" alt="logo" class="w-28">
@@ -26,9 +29,13 @@
             <div class="mx-auto sm:max-w-xl">
                 <p class="text-center">Siap berjelajah? Masukkan email Anda untuk mulai dan berlangganan berita
                     terbaru.</p>
-                <form action="https://smartslidingwall.id" class="mt-4 flex justify-between gap-2">
-                    <input type="email" name="email-input" id="email-input" placeholder="Alamat email"
-                        class="input-primary">
+                <form action="https://smartslidingwall.id/" class="form-1 w-full mt-4 flex justify-between gap-2">
+                    <div class="relative">
+                        <input type="email" name="email-input" id="email-input-1" placeholder="Alamat email"
+                            autocomplete="off" class="input-primary">
+                        <small class="text-red-500 italic absolute -bottom-5 left-0 hidden">Error
+                            message</small>
+                    </div>
                     <button type="submit" class="btn-primary">Mulai</button>
                 </form>
             </div>
@@ -63,9 +70,13 @@
                     <p class="text-center">Siap berjelajah? Masukkan email Anda untuk mulai dan berlangganan
                         berita
                         terbaru.</p>
-                    <form action="https://smartslidingwall.id" class="mt-4 flex justify-between gap-2">
-                        <input type="email" name="email-input" id="email-input" placeholder="Alamat email"
-                            class="input-primary">
+                    <form action="https://smartslidingwall.id/" class="form-2 w-full mt-4 flex justify-between gap-2">
+                        <div class="input-container relative">
+                            <input type="email" name="email-input" id="email-input-2" placeholder="Alamat email"
+                                autocomplete="off" class="email-input input-primary">
+                            <small class="error-message text-red-500 italic absolute -bottom-5 left-0 hidden">Error
+                                message</small>
+                        </div>
                         <button type="submit" class="btn-primary">Mulai</button>
                     </form>
                 </div>
@@ -98,6 +109,12 @@
     </div>
 
     <script src="public/js/main.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('v6b__ECNTuRDkCpAD');
+        })();
+    </script>
 </body>
 
 </html>

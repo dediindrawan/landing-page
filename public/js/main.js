@@ -1,11 +1,142 @@
 'use strict';
 
+// popup toast
+let toast = document.querySelector('.toast');
+
+// form input 1
+const form1 = document.querySelector('.form-1');
+const emailInput1 = document.querySelector('#email-input-1');
+
+form1.addEventListener('submit', (e) => {
+    if (validateForm1()) {
+        form1.submit();
+    } else {
+        e.preventDefault();
+    };
+});
+
+function validateForm1() {
+    let errorMessage = emailInput1.nextElementSibling;
+
+    if (emailInput1.value.trim() == '') {
+        errorMessage.style.display = 'block';
+        errorMessage.textContent = 'Alamat email tidak boleh kosong';
+        emailInput1.focus();
+    } else if (!isEmailValid1(emailInput1.value)) {
+        errorMessage.style.display = 'block';
+        errorMessage.textContent = 'Format email tidak valid';
+        emailInput1.focus();
+    } else {
+        sendEmail1();
+    };
+};
+
+function isEmailValid1(emailInput1) {
+    const reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    return reg.test(emailInput1);
+};
+
+function sendEmail1() {
+    let params = {
+        email: emailInput1.value,
+    };
+
+    const serviceId = "service_hhanyka";
+    const templateId = "template_tuvl81v";
+
+    emailjs.send(serviceId, templateId, params)
+        .then(res => {
+            emailInput1.value;
+            console.log(res);
+
+            toast.style.display = 'block';
+
+            function showToast() {
+                setTimeout(function () {
+                    toast.innerHTML = `<p>Menyiapkan halaman utama Smart Sliding Walls</p>`;
+                }, 2500);
+                setTimeout(function () {
+                    toast.style.display = 'none';
+                }, 5000);
+            };
+            showToast();
+        })
+        .catch(err => {
+            console.error(err);
+        });
+};
+
+// form input 2
+const form2 = document.querySelector('.form-2');
+const emailInput2 = document.querySelector('#email-input-2');
+
+form2.addEventListener('submit', (e) => {
+    if (validateForm2()) {
+        form2.submit();
+    } else {
+        e.preventDefault();
+    };
+});
+
+function validateForm2() {
+    let errorMessage = emailInput2.nextElementSibling;
+
+    if (emailInput2.value.trim() == '') {
+        errorMessage.style.display = 'block';
+        errorMessage.textContent = 'Alamat email tidak boleh kosong';
+        emailInput2.focus();
+    } else if (!isEmailValid1(emailInput2.value)) {
+        errorMessage.style.display = 'block';
+        errorMessage.textContent = 'Format email tidak valid';
+        emailInput2.focus();
+    } else {
+        sendEmail2();
+    };
+};
+
+function isEmailValid1(emailInput2) {
+    const reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    return reg.test(emailInput2);
+};
+
+function sendEmail2() {
+    let params = {
+        email: emailInput2.value,
+    };
+
+    const serviceId = "service_hhanyka";
+    const templateId = "template_tuvl81v";
+
+    emailjs.send(serviceId, templateId, params)
+        .then(res => {
+            emailInput2.value;
+            console.log(res);
+
+            toast.style.display = 'block';
+
+            function showToast() {
+                setTimeout(function () {
+                    toast.innerHTML = `<p>Menyiapkan halaman utama Smart Sliding Walls</p>`;
+                }, 2500);
+                setTimeout(function () {
+                    toast.style.display = 'none';
+                }, 5000);
+            };
+            showToast();
+        })
+        .catch(err => {
+            console.error(err);
+        });
+};
+
+// fetching data from json
 const data = 'src/data/data.json';
 
 const card = document.querySelector('.card');
 const faq = document.querySelector('.faq');
 
-// fetching data from json
 const getDataObject = () => {
     fetch(data)
         .then(res => {
