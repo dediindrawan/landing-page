@@ -1,43 +1,35 @@
 'use strict';
 
 // popup toast
-// let toast = document.querySelector('.toast');
+let toast = document.querySelector('.toast');
 
-// form input 1
+// input 1 form validation
 const form1 = document.querySelector('.form-1');
 const emailInput1 = document.querySelector('#email-input-1');
-
-console.log(form1)
+let errorMessage1 = document.querySelector('.error-message-1');
 
 form1.addEventListener('submit', (e) => {
+    e.preventDefault();
+
     if (validateForm1()) {
-        form1.submit();
-    } else {
-        e.preventDefault();
+        sendEmail1();
     };
 });
 
 function validateForm1() {
-    let result = true;
-    let errorMessage = emailInput1.nextElementSibling;
-
     if (emailInput1.value.trim() == '') {
-        errorMessage.style.display = 'block';
-        errorMessage.textContent = 'Alamat email tidak boleh kosong';
-
-        result = false;
+        errorMessage1.style.display = 'block';
+        errorMessage1.textContent = 'Alamat email tidak boleh kosong';
         emailInput1.focus();
-    } else if (!isEmailValid1(emailInput1.value.trim())) {
-        errorMessage.style.display = 'block';
-        errorMessage.textContent = 'Format email tidak valid';
-
-        result = false;
-        emailInput1.focus();
+        return false;
+    } else if (isEmailValid1(emailInput1.value.trim())) {
+        return true;
     } else {
-        sendEmail1();
+        errorMessage1.style.display = 'block';
+        errorMessage1.textContent = 'Format email tidak valid';
+        emailInput1.focus();
+        return false;
     };
-
-    return result;
 };
 
 function isEmailValid1(emailInput1) {
@@ -59,60 +51,53 @@ function sendEmail1() {
             emailInput1.value;
             console.log(res);
 
-            // toast.style.display = 'block';
+            toast.style.display = 'block';
 
-            // function showToast() {
-            //     setTimeout(function () {
-            //         toast.innerHTML = `<p>Menyiapkan halaman utama Smart Sliding Walls</p>`;
-            //     }, 2500);
-            //     setTimeout(function () {
-            //         toast.style.display = 'none';
-            //         form1.attributes
-            //     }, 5000);
-            // };
-            // showToast();
+            function showToast1() {
+                setTimeout(function () {
+                    toast.innerHTML = `<p>Menyiapkan halaman utama Smart Sliding Wall</p>`;
+                }, 2500);
+                setTimeout(function () {
+                    form1.submit();
+                }, 5000);
+            };
+            showToast1();
         })
         .catch(err => {
             console.error(err);
         });
 };
 
-// form input 2
+// input 2 form validation
 const form2 = document.querySelector('.form-2');
 const emailInput2 = document.querySelector('#email-input-2');
+let errorMessage2 = document.querySelector('.error-message-2');
 
 form2.addEventListener('submit', (e) => {
+    e.preventDefault();
+
     if (validateForm2()) {
-        form2.submit();
-    } else {
-        e.preventDefault();
+        sendEmail2();
     };
 });
 
 function validateForm2() {
-    let result = true;
-    let errorMessage = emailInput2.nextElementSibling;
-
     if (emailInput2.value.trim() == '') {
-        errorMessage.style.display = 'block';
-        errorMessage.textContent = 'Alamat email tidak boleh kosong';
-
-        result = false;
+        errorMessage2.style.display = 'block';
+        errorMessage2.textContent = 'Alamat email tidak boleh kosong';
         emailInput2.focus();
-    } else if (!isEmailValid1(emailInput2.value)) {
-        errorMessage.style.display = 'block';
-        errorMessage.textContent = 'Format email tidak valid';
-
-        result = false;
-        emailInput2.focus();
+        return false;
+    } else if (isEmailValid2(emailInput2.value.trim())) {
+        return true;
     } else {
-        sendEmail2();
+        errorMessage2.style.display = 'block';
+        errorMessage2.textContent = 'Format email tidak valid';
+        emailInput2.focus();
+        return false;
     };
-
-    return result;
 };
 
-function isEmailValid1(emailInput2) {
+function isEmailValid2(emailInput2) {
     const reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     return reg.test(emailInput2);
@@ -131,17 +116,17 @@ function sendEmail2() {
             emailInput2.value;
             console.log(res);
 
-            // toast.style.display = 'block';
+            toast.style.display = 'block';
 
-            // function showToast() {
-            //     setTimeout(function () {
-            //         toast.innerHTML = `<p>Menyiapkan halaman utama Smart Sliding Walls</p>`;
-            //     }, 2500);
-            //     setTimeout(function () {
-            //         toast.style.display = 'none';
-            //     }, 5000);
-            // };
-            // showToast();
+            function showToast1() {
+                setTimeout(function () {
+                    toast.innerHTML = `<p>Menyiapkan halaman utama Smart Sliding Wall</p>`;
+                }, 2500);
+                setTimeout(function () {
+                    form2.submit();
+                }, 5000);
+            };
+            showToast1();
         })
         .catch(err => {
             console.error(err);
@@ -152,7 +137,6 @@ function sendEmail2() {
 const data = 'src/data/data.json';
 
 const card = document.querySelector('.card');
-const faq = document.querySelector('.faq');
 
 const getDataObject = () => {
     fetch(data)
@@ -164,10 +148,12 @@ const getDataObject = () => {
             listCard.forEach(list => {
                 card.innerHTML +=
                     `
-                    <article class="text-center">
-                        <h1>${list.heading}</h1>
-                        <p class="mt-4 mb-6">${list.caption}</p>
-                        <img src="${list.image}" alt="image" class="w-4/5 mx-auto img-border">
+                    <article class="text-center lg:flex lg:justify-between lg:items-center lg:gap-12">
+                        <div>
+                            <h1>${list.heading}</h1>
+                            <p class="mt-4 mb-6">${list.caption}</p>
+                        </div>
+                        <img src="${list.image}" alt="image"  class="w-4/5 mx-auto img-border lg:w-2/4">
                     </article>
                     `
             });

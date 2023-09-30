@@ -89,6 +89,10 @@
     @apply p-4 bg-neutral-700 hidden;
   }
 
+  .card article:nth-child(even) div {
+   @apply order-2;
+  }
+
   .rotate-up-icon {
     transform: rotate(-180deg);
     transition: all 0.3s ease-in-out;

@@ -670,6 +670,10 @@ i{
   padding: 1rem;
 }
 
+.card article:nth-child(even) div{
+  order: 2;
+}
+
 .rotate-up-icon {
   transform: rotate(-180deg);
   transition: all 0.3s ease-in-out;
@@ -835,6 +839,10 @@ i{
   font-style: italic;
 }
 
+.leading-8{
+  line-height: 2rem;
+}
+
 .text-red-500{
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
@@ -861,13 +869,61 @@ i{
 }
 
 @media (min-width: 768px){
-  .md\:px-12{
-    padding-left: 3rem;
-    padding-right: 3rem;
+  .md\:mx-auto{
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .md\:px-4{
-    padding-left: 1rem;
-    padding-right: 1rem;
+  .md\:max-w-2xl{
+    max-width: 42rem;
+  }
+
+  .md\:max-w-lg{
+    max-width: 32rem;
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:mx-12{
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  .lg\:flex{
+    display: flex;
+  }
+
+  .lg\:w-2\/4{
+    width: 50%;
+  }
+
+  .lg\:max-w-6xl{
+    max-width: 72rem;
+  }
+
+  .lg\:max-w-3xl{
+    max-width: 48rem;
+  }
+
+  .lg\:items-center{
+    align-items: center;
+  }
+
+  .lg\:justify-between{
+    justify-content: space-between;
+  }
+
+  .lg\:gap-12{
+    gap: 3rem;
+  }
+
+  .lg\:px-24{
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .lg\:px-12{
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
