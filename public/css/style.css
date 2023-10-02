@@ -897,6 +897,11 @@ i{
 }
 
 @media (min-width: 1024px){
+  .lg\:mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .lg\:flex{
     display: flex;
   }
@@ -915,6 +920,18 @@ i{
 
   .lg\:max-w-6xl{
     max-width: 72rem;
+  }
+
+  .lg\:max-w-7xl{
+    max-width: 80rem;
+  }
+
+  .lg\:max-w-xl{
+    max-width: 36rem;
+  }
+
+  .lg\:max-w-2xl{
+    max-width: 42rem;
   }
 
   .lg\:items-center{
