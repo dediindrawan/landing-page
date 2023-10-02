@@ -89,12 +89,20 @@
     @apply p-4 bg-neutral-700 hidden;
   }
 
-  .card article:nth-child(even) div {
-   @apply order-2;
+  .accordions i {
+    transition: all 0.3s ease-in-out;
   }
 
-  .rotate-up-icon {
+  .active-list {
+    @apply inline-block !important;
+  }
+
+  .rotate-up {
     transform: rotate(-180deg);
     transition: all 0.3s ease-in-out;
+  }
+
+  .card article:nth-child(even) div:nth-child(odd) {
+    @apply order-2;
   }
 }

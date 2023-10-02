@@ -670,13 +670,21 @@ i{
   padding: 1rem;
 }
 
-.card article:nth-child(even) div{
-  order: 2;
+.accordions i {
+  transition: all 0.3s ease-in-out;
 }
 
-.rotate-up-icon {
+.active-list{
+  display: inline-block !important;
+}
+
+.rotate-up {
   transform: rotate(-180deg);
   transition: all 0.3s ease-in-out;
+}
+
+.card article:nth-child(even) div:nth-child(odd){
+  order: 2;
 }
 
 .fixed{
@@ -733,16 +741,16 @@ i{
   display: block;
 }
 
-.inline-block{
-  display: inline-block;
-}
-
 .flex{
   display: flex;
 }
 
 .hidden{
   display: none;
+}
+
+.aspect-video{
+  aspect-ratio: 16 / 9;
 }
 
 .min-h-screen{
@@ -793,6 +801,11 @@ i{
 
 .to-orange-500{
   --tw-gradient-to: #f97316 var(--tw-gradient-to-position);
+}
+
+.object-cover{
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-4{
@@ -884,25 +897,24 @@ i{
 }
 
 @media (min-width: 1024px){
-  .lg\:mx-12{
-    margin-left: 3rem;
-    margin-right: 3rem;
-  }
-
   .lg\:flex{
     display: flex;
   }
 
-  .lg\:w-2\/4{
-    width: 50%;
+  .lg\:w-2\/5{
+    width: 40%;
   }
 
-  .lg\:max-w-6xl{
-    max-width: 72rem;
+  .lg\:w-3\/5{
+    width: 60%;
   }
 
   .lg\:max-w-3xl{
     max-width: 48rem;
+  }
+
+  .lg\:max-w-6xl{
+    max-width: 72rem;
   }
 
   .lg\:items-center{
@@ -920,10 +932,5 @@ i{
   .lg\:px-24{
     padding-left: 6rem;
     padding-right: 6rem;
-  }
-
-  .lg\:px-12{
-    padding-left: 3rem;
-    padding-right: 3rem;
   }
 }

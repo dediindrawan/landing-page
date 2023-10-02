@@ -149,11 +149,13 @@ const getDataObject = () => {
                 card.innerHTML +=
                     `
                     <article class="text-center lg:flex lg:justify-between lg:items-center lg:gap-12">
-                        <div>
+                        <div class="lg:w-3/5">
                             <h1>${list.heading}</h1>
                             <p class="mt-4 mb-6">${list.caption}</p>
                         </div>
-                        <img src="${list.image}" alt="image"  class="w-4/5 mx-auto img-border lg:w-2/4">
+                        <div class="w-4/5 mx-auto lg:w-2/5">
+                            <img src="${list.image}" alt="image" class="w-full aspect-video object-cover img-border">
+                        </div>
                     </article>
                     `
             });
@@ -163,24 +165,25 @@ const getDataObject = () => {
 };
 document.addEventListener('DOMContentLoaded', getDataObject);
 
-const accordions = document.querySelectorAll('.accordions li:first-child');
+// accordion faq section
+const accordions = document.querySelectorAll('.accordions');
+
 accordions.forEach(accordion => {
-    accordion.addEventListener('click', () => {
-        accordions.forEach(accordion => {
-            if (accordion.nextElementSibling.style.display = 'inline-block') {
-                accordion.nextElementSibling.style.display = 'none';
-                accordion.firstElementChild.classList.remove('rotate-up-icon');
-            };
+    const toggleButton = accordion.firstElementChild;
+    const contentList = accordion.lastElementChild;
+    const chevronIcon = toggleButton.firstElementChild;
+
+    toggleButton.addEventListener('click', () => {
+        const activeList = contentList.classList.contains('active-list');
+
+        accordions.forEach(otherAccordion => {
+            otherAccordion.lastElementChild.classList.remove('active-list');
+            otherAccordion.firstElementChild.lastElementChild.classList.remove('rotate-up');
         });
-        accordion.nextElementSibling.style.display = 'inline-block';
-        accordion.firstElementChild.classList.add('rotate-up-icon');
-    });
-    // click anywhere to close content
-    document.addEventListener('click', (e) => {
-        if (!accordion.contains(e.target)) {
-            accordion.nextElementSibling.style.display = 'none';
-            accordion.firstElementChild.classList.remove('rotate-up-icon');
+
+        if (!activeList) {
+            contentList.classList.toggle('active-list');
+            chevronIcon.classList.toggle('rotate-up');
         };
     });
 });
-
