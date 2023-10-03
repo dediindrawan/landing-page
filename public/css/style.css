@@ -609,7 +609,7 @@ i{
 }
 
 .wrapper-header {
-  background-image: url(/src/asset/image-1.jpeg);
+  background-image: url(src/asset/image-1.jpeg);
   background-size: cover;
   background-position: center;
   display: flex;
