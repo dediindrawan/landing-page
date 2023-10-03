@@ -4,36 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Sliding Wall - CV. Smart Asia Tech</title>
+    <title>Smart Sliding Wall CV.Smart Asia Tech</title>
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 </head>
 
 <body>
     <div class="main-container">
-        <div class="toast w-full p-4 fixed top-0 z-20 bg-gradient-to-br from-orange-400 to-orange-500 hidden">
+        <div class="toast">
             <p>Terimakasih atas antusias Anda</p>
         </div>
 
-        <header class="min-h-screen pt-4 px-4 pb-12 flex flex-col justify-between sm:px-8 lg:px-24">
-            <div class="flex justify-between items-center">
-                <img src="src/asset/brand.png" alt="logo" class="w-28">
-                <a href="tel:081806508666" class="btn-primary">Hubungi Kami</a>
+        <header class="wrapper-header">
+            <div class="top-header">
+                <img src="src/asset/brand.png" alt="logo" class="w-32">
+                <a href="tel:081806508666" class="btn-primary text-lg">Hubungi Kami</a>
             </div>
-            <div class="text-center mx-auto sm:max-w-xl md:max-w-2xl lg:max-w-6xl">
-                <h1>Design. Production. Installation.<br>One Stop Service with <span class="font-gradient">"Smart
+            <div class="middle-header">
+                <h1 class="md:text-4xl md:leading-snug lg:text-5xl lg:leading-snug">Design. Production.
+                    Installation.<br>One Stop
+                    Service with <span class="font-gradient">"Smart
                         Sliding Wall"</span></h1>
-                <p class="mt-4 text-xl">Spesialis partisi dinding geser peredam suara dengan pengalaman lebih dari 13
-                    tahun.</p>
+                <h2 class="mt-4 text-xl">Spesialis partisi dinding geser peredam suara dengan pengalaman lebih
+                    dari
+                    13
+                    tahun.</h2>
             </div>
-            <div class="mx-auto sm:max-w-xl md:max-w-2xl">
-                <p class="text-center">Siap berinovasi? Masukkan email Anda untuk mulai dan berlangganan berita
+            <div class="bottom-header">
+                <p class="text-center text-lg">Siap berinovasi? Masukkan email Anda untuk mulai dan berlangganan
+                    berita
                     terbaru.</p>
-                <form action="https://smartslidingwall.id"
-                    class="form-1 mt-4 flex justify-between gap-2 relative md:max-w-lg md:mx-auto">
+                <form action="https://smartslidingwall.id" class="form-1 form-group" id="form-1">
                     <input type="email" name="email-input" id="email-input-1" placeholder="Alamat email"
                         autocomplete="off" class="input-primary">
-                    <small class="error-message-1 text-red-500 italic absolute -bottom-5 left-0 hidden">Error
+                    <small class="error-message-1 error-message">Error
                         message</small>
                     <button type="submit" class="btn-primary">Mulai</button>
                 </form>
@@ -45,17 +49,18 @@
 
             <section>
                 <h1 class="mb-4 text-center">Tanya Jawab Umum</h1>
-                <div class="lg:max-w-2xl lg:mx-auto">
+                <div>
                     <ul class="accordions flex flex-col">
                         <li>Apa itu Smart Sliding Wall? <i class="fa-solid fa-chevron-down"></i></li>
-                        <li>Smart Sliding Wall adalah sebuah perusahaan penyedia jasa yang berpengalaman sebagai
+                        <li>Smart Sliding Wall CV.Smart Asia Tech adalah sebuah perusahaan penyedia jasa yang
+                            berpengalaman sebagai
                             spesialis partisi dinding geser peredam suara (moveable wall atau sliding wall) dan telah
                             berdiri sejak tahun 2009.</li>
                     </ul>
                     <ul class="accordions flex flex-col">
                         <li>Apakah bisa servis partisi? <i class="fa-solid fa-chevron-down"></i></li>
                         <li>Layanan kami meliputi servis panel Sliding Wall atau Moveable Wall, termasuk bongkar pasang
-                            panel lama yang mengalamai masalah seperti kerusakan pada panel pengunci, surface rusak,
+                            panel lama yang mengalami masalah seperti kerusakan pada panel pengunci, surface rusak,
                             runner tidak lancar, roda rusak, dan rubber sobek atau lepas.</li>
                     </ul>
                     <ul class="accordions flex flex-col">
@@ -66,7 +71,7 @@
                     </ul>
                     <ul class="accordions flex flex-col">
                         <li>Apakah produk bergaransi? <i class="fa-solid fa-chevron-down"></i></li>
-                        <li>Kami mengerti bagaimana menciptakan sebuah hubungan kerjasama yang baik dan berintegritas.
+                        <li>Kami mengerti bagaimana menciptakan sebuah hubungan kerjasama dan kolaborasi yang baik.
                             Oleh karena itu, kami selalu memberikan jaminan garansi panel selama 2 tahun dengan syarat
                             dan ketentuan yang berlaku.</li>
                     </ul>
@@ -85,7 +90,7 @@
                         berita
                         terbaru.</p>
                     <form action="https://smartslidingwall.id"
-                        class="form-2 mt-4 flex justify-between gap-2 relative md:max-w-lg md:mx-auto">
+                        class="form-2 mt-4 flex justify-between gap-2 relative md:max-w-lg md:mx-auto" id="form-2">
                         <input type="email" name="email-input" id="email-input-2" placeholder="Alamat email"
                             autocomplete="off" class="input-primary">
                         <small class="error-message-2 text-red-500 italic absolute -bottom-5 left-0 hidden">Error
@@ -104,9 +109,9 @@
 
             <div class="my-8 leading-8 flex justify-between gap-4">
                 <ul class="underline">
-                    <li><a href="#">Privasi</a></li>
+                    <li><a href="public/pages/privacy.html">Privasi</a></li>
                     <li><a href="#">Informasi Perusahaan</a></li>
-                    <li><a href="#">Hanya di Smart Sliding Walls</a></li>
+                    <li><a href="#">Hanya di Smart Sliding Wall</a></li>
                 </ul>
                 <ul class="underline">
                     <li><a href="#">Pusat Bantuan</a></li>
@@ -116,12 +121,15 @@
             </div>
 
             <div class="py-6">
-                <p>Smart Sliding Wall By: CV. Smart Asia Tech</p>
+                <p>Smart Sliding Wall CV.Smart Asia Tech</p>
             </div>
         </footer>
     </div>
 
+    <script src="public/js/app.js"></script>
     <script src="public/js/main.js"></script>
+    <script src="public/js/script.js"></script>
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
