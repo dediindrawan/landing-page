@@ -165,7 +165,7 @@
   }
 
   .footer-wrapper p,
-  .footer-wrapper a {
+  .footer-wrapper ul {
     @apply text-opacity-80;
   }
 

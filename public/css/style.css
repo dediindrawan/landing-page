@@ -973,7 +973,7 @@ article:not(:last-child){
 }
 
 .footer-wrapper p,
-  .footer-wrapper a{
+  .footer-wrapper ul{
   --tw-text-opacity: 0.8;
 }
 
@@ -1121,10 +1121,6 @@ article:not(:last-child){
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[url\(\'\/src\/asset\/image-1\.jpeg\'\)\]{
-  background-image: url('/src/asset/image-1.jpeg');
 }
 
 .bg-\[url\(\'src\/asset\/image-1\.jpeg\'\)\]{
