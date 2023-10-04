@@ -173,11 +173,11 @@
   /* ========== privacy page style ========== */
 
   .privacy-header {
-    @apply w-full h-16 flex justify-between items-center sm:max-w-2xl sm:mx-auto md:max-w-4xl lg:max-w-6xl lg:px-14;
+    @apply w-full h-16 px-4 flex justify-between items-center sm:max-w-2xl sm:mx-auto sm:px-8 md:max-w-4xl md:px-8 lg:max-w-6xl lg:px-14;
   }
 
   .privacy-group-content {
-    @apply px-4 sm:max-w-2xl sm:mx-auto sm:px-8 md:max-w-4xl md:px-12 lg:max-w-6xl lg:px-14;
+    @apply px-4 sm:max-w-2xl sm:mx-auto sm:px-8 md:max-w-4xl md:px-8 lg:max-w-6xl lg:px-14;
   }
 
   .privacy-wrapper h1,
