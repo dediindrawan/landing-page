@@ -1127,6 +1127,10 @@ article:not(:last-child){
   background-image: url('/src/asset/image-1.jpeg');
 }
 
+.bg-\[url\(\'src\/asset\/image-1\.jpeg\'\)\]{
+  background-image: url('src/asset/image-1.jpeg');
+}
+
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
