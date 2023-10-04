@@ -171,38 +171,46 @@
 
   /* ========== privacy page style ========== */
 
-  .privacy-content h1,
-  .privacy-content h2,
-  .privacy-content h3,
-  .privacy-content p {
+  .privacy-header {
+    @apply w-full h-16 px-4 flex justify-between items-center sm:max-w-2xl sm:mx-auto sm:px-8 md:max-w-4xl md:px-12 lg:max-w-6xl lg:px-14;
+  }
+
+  .privacy-group-content {
+    @apply px-4 sm:max-w-2xl sm:mx-auto sm:px-8 md:max-w-4xl md:px-12 lg:max-w-6xl lg:px-14;
+  }
+
+  .privacy-wrapper h1,
+  .privacy-wrapper h2,
+  .privacy-wrapper h3,
+  .privacy-wrapper p {
     @apply text-black;
   }
 
-  .privacy-content h2 {
+  .privacy-wrapper h2 {
     @apply text-lg font-extrabold;
   }
 
-  .privacy-content a {
+  .privacy-wrapper a {
     @apply text-orange-400;
   }
 
-  .privacy-content ol {
+  .privacy-wrapper ol {
     @apply list-decimal text-black;
   }
 
-  .privacy-content ul {
+  .privacy-wrapper ul {
     @apply list-inside list-disc font-normal text-black;
   }
 
-  .privacy-content i {
+  .privacy-wrapper i {
     @apply text-orange-400;
   }
 
-  .privacy-content section {
+  .privacy-wrapper section {
     @apply mb-0;
   }
 
-  .privacy-content section ol li:not(:first-child):not(ul li) {
+  .privacy-wrapper section ol li:not(:first-child):not(ul li) {
     @apply mt-8;
   }
 
