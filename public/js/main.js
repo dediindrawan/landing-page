@@ -22,3 +22,8 @@ accordions.forEach(accordion => {
         };
     });
 });
+
+// open map location on company info page
+function openMap() {
+    location.href = 'https://maps.app.goo.gl/oZZNUmXyd55Z7LFr5';
+};
