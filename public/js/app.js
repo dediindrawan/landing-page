@@ -3,25 +3,25 @@
 // fetching data from json
 const data = 'src/data/data.json';
 
-const card = document.querySelector('.card');
+const cardWrapper = document.querySelector('.card-wrapper');
 
 const getDataObject = () => {
     fetch(data)
         .then(res => {
             return res.json();
         }).then(getData => {
-            card.innerHTML = '';
+            cardWrapper.innerHTML = '';
             let listCard = getData.card;
             listCard.forEach(list => {
-                card.innerHTML +=
+                cardWrapper.innerHTML +=
                     `
-                    <article class="text-center lg:flex lg:justify-between lg:items-center lg:gap-12">
+                    <article class="card-content">
                         <div class="lg:w-3/5">
-                            <h1>${list.heading}</h1>
-                            <p class="mt-4 mb-6">${list.caption}</p>
+                            <h1 class="md:text-4xl md:leading-snug lg:text-5xl lg:leading-snug">${list.heading}</h1>
+                            <p class="mt-4 mb-6 lg:text-lg">${list.caption}</p>
                         </div>
-                        <div class="w-4/5 mx-auto lg:w-2/5">
-                            <img src="${list.image}" alt="image" class="w-full aspect-video object-cover img-border">
+                        <div class="image-wrapper">
+                            <img src="${list.image}" alt="image" class="image-content">
                         </div>
                     </article>
                     `

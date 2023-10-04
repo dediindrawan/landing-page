@@ -4,15 +4,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @layer base {
+  ::selection {
+    color: #fff;
+    background-color: rgb(251, 146, 60);
+  }
+
   body {
     font-family: 'Poppins', sans-serif;
     background-color: #000;
     scroll-behavior: smooth;
-  }
-
-  ::selection {
-    color: #fff;
-    background-color: rgb(251, 146, 60);
   }
 
   h1 {
@@ -20,11 +20,23 @@
   }
 
   h2 {
-    @apply text-slate-300;
+    @apply text-lg text-slate-300;
   }
 
   p {
-    @apply text-slate-300;
+    @apply text-base text-slate-300;
+  }
+
+  small {
+    @apply text-base text-red-500;
+  }
+
+  ul {
+    @apply text-base text-slate-300;
+  }
+
+  i {
+    @apply text-base text-slate-300;
   }
 
   input:focus {
@@ -38,29 +50,24 @@
   article:not(:last-child) {
     @apply mb-28;
   }
-
-  ul {
-    @apply text-slate-300;
-  }
-
-  i {
-    @apply text-slate-300;
-  }
 }
 
 @layer components {
+  /* ========== index page style ========== */
+
   .toast {
     @apply w-full p-4 text-lg fixed top-0 z-20 bg-gradient-to-br from-orange-400 to-orange-500 hidden;
   }
 
-  .wrapper-header {
-    background-image: url(src/asset/image-1.jpeg);
-    background-size: cover;
-    background-position: center;
-    @apply min-h-screen px-4 pb-6 flex flex-col justify-between sm:px-8 sm:pb-8 md:px-12 md:pb-16 lg:px-16 lg:pb-32;
+  .font-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-br from-orange-400 to-orange-600;
   }
 
-  .wrapper-header::after {
+  .header-wrapper {
+    @apply min-h-screen px-4 pb-6 flex flex-col justify-between bg-cover bg-center relative sm:px-8 sm:pb-8 md:px-12 md:pb-16 lg:px-16 lg:pb-32;
+  }
+
+  .header-wrapper::after {
     content: '';
     display: block;
     position: absolute;
@@ -71,12 +78,12 @@
     background-image: linear-gradient(to bottom, rgba(160, 149, 146, 0.5), rgba(0, 0, 0, 0.9));
   }
 
-  .wrapper-header div {
+  .header-wrapper div {
     @apply relative z-10;
   }
 
   .top-header {
-    @apply w-full h-16 flex justify-between items-center sm:max-w-2xl sm:mx-auto md:max-w-4xl lg:max-w-6xl;
+    @apply w-full h-16 flex justify-between items-center sm:max-w-2xl sm:mx-auto md:max-w-4xl lg:max-w-6xl lg:px-14;
   }
 
   .middle-header {
@@ -92,27 +99,43 @@
   }
 
   .input-primary {
-    @apply w-full p-4 text-lg text-slate-300 border-2 border-orange-400 rounded-md bg-transparent;
+    @apply w-full p-4 text-base text-slate-300 border-2 border-orange-400 rounded-md bg-transparent;
   }
 
   .btn-primary {
-    @apply py-2.5 px-4 text-lg text-white bg-gradient-to-br from-orange-400 to-orange-600 rounded-md;
+    @apply py-2.5 px-4 text-white bg-gradient-to-br from-orange-400 to-orange-600 rounded-md;
   }
 
   .error-message {
-    @apply text-red-500 italic absolute -bottom-5 left-0 hidden;
+    @apply italic absolute -bottom-6 left-0 hidden;
   }
 
-  .font-gradient {
-    @apply text-transparent bg-clip-text bg-gradient-to-br from-orange-400 to-orange-600;
+  .main-wrapper {
+    @apply py-20 px-4 sm:max-w-2xl sm:mx-auto sm:px-8 md:max-w-4xl md:px-12 lg:max-w-6xl;
   }
 
-  .img-border {
-    @apply border-2 border-orange-400 rounded-lg;
+  .card-wrapper article:nth-child(even) div:nth-child(odd) {
+    @apply order-2;
+  }
+
+  .card-content {
+    @apply text-center lg:flex lg:justify-between lg:items-center lg:gap-16;
+  }
+
+  .image-wrapper {
+    @apply w-4/5 mx-auto sm:w-3/5 lg:w-3/6;
+  }
+
+  .image-content {
+    @apply aspect-video object-cover border-2 border-orange-400 rounded-lg;
   }
 
   .accordions:not(:last-child) {
     @apply mb-2;
+  }
+
+  .accordions li {
+    @apply lg:text-lg;
   }
 
   .accordions li:first-child {
@@ -125,6 +148,7 @@
 
   .accordions i {
     transition: all 0.3s ease-in-out;
+    @apply lg:text-lg;
   }
 
   .active-list {
@@ -136,13 +160,16 @@
     transition: all 0.3s ease-in-out;
   }
 
-  .card article:nth-child(even) div:nth-child(odd) {
-    @apply order-2;
+  .footer-wrapper {
+    @apply pt-20 px-4 sm:max-w-2xl sm:mx-auto sm:px-8 md:max-w-4xl md:px-12 lg:max-w-6xl;
   }
 
-  .flex-between-center {
-    @apply flex justify-between items-center;
+  .footer-wrapper p,
+  .footer-wrapper a {
+    @apply text-opacity-80;
   }
+
+  /* ========== privacy page style ========== */
 
   .privacy-content h1,
   .privacy-content h2,
