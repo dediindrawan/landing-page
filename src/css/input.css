@@ -28,7 +28,7 @@
   }
 
   small {
-    @apply text-base text-red-500;
+    @apply text-sm text-red-500;
   }
 
   ul {
@@ -64,6 +64,7 @@
   }
 
   .header-wrapper {
+    background-image: url('https://i.ibb.co/qnvZb3L/image-1.jpg');
     @apply min-h-screen px-4 pb-6 flex flex-col justify-between bg-cover bg-center relative sm:px-8 sm:pb-8 md:px-12 md:pb-16 lg:px-16 lg:pb-32;
   }
 
@@ -172,7 +173,7 @@
   /* ========== privacy page style ========== */
 
   .privacy-header {
-    @apply w-full h-16 px-4 flex justify-between items-center sm:max-w-2xl sm:mx-auto sm:px-8 md:max-w-4xl md:px-12 lg:max-w-6xl lg:px-14;
+    @apply w-full h-16 flex justify-between items-center sm:max-w-2xl sm:mx-auto md:max-w-4xl lg:max-w-6xl lg:px-14;
   }
 
   .privacy-group-content {
@@ -217,7 +218,7 @@
   .privacy-footer p,
   .privacy-footer a,
   .privacy-footer ul {
-    @apply text-slate-300;
+    @apply text-slate-300 text-opacity-80;
   }
 
   .privacy-footer::after {
