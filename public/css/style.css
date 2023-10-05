@@ -1104,12 +1104,12 @@ article:not(:last-child){
   content: '';
   display: block;
   position: absolute;
-  width: 75%;
+  width: 85%;
   height: 50%;
   top: 0;
   right: 0;
   z-index: -1;
-  background-image: linear-gradient(to top right, rgb(0, 0, 0) 44%, rgba(251, 146, 60, 0.7));
+  background-image: linear-gradient(to top right, rgb(0, 0, 0) 44%, rgba(251, 146, 60, 0.8));
 }
 
 .relative{
